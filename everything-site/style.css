@@ -1,0 +1,66 @@
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.home {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background: #000;
+}
+
+h1 {
+  margin: 0;
+  padding: 12vh 4vw 0;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(50px, min(22vw, 26vh), 360px);
+  line-height: .9;
+  text-align: left;
+}
+
+h1 span { display: inline; }
+
+h1 > span:nth-child(1) { font-size: .85em; font-weight: 700; color: #fef8f0;  text-shadow: 0 0 15px rgba(254,248,240,0.7), 0 0 45px rgba(254,248,240,0.3); opacity: 0; animation: w1 3s 0.8s 1 both; }
+h1 > span:nth-child(3) { font-size: .85em; font-weight: 700; color: #fef8f0;  text-shadow: 0 0 15px rgba(254,248,240,0.7), 0 0 45px rgba(254,248,240,0.3); opacity: 0; animation: w2 3s 0.8s 1 both; }
+h1 > span:nth-child(4) { font-size: .85em; font-weight: 300; color: #e8d4bc;  text-shadow: 0 0 12px rgba(232,212,188,0.4), 0 0 35px rgba(232,212,188,0.2); opacity: 0; animation: w3 3s 0.8s 1 both; }
+h1 > span:nth-child(5) { font-size: .85em; font-weight: 500; color: #d8d2cc;  text-shadow: 0 0 15px rgba(216,210,204,0.6), 0 0 45px rgba(216,210,204,0.3); opacity: 0; animation: w4 3s 0.8s 1 both; }
+h1 > span:nth-child(6) { font-size: .85em; font-weight: 800; color: #ffffff;  text-shadow: 0 0 18px rgba(255,255,255,0.75), 0 0 55px rgba(255,255,255,0.4); opacity: 0; animation: w5 3s 0.8s 1 both; }
+
+@keyframes w1 { 0% { opacity: 0; } 1%, 100% { opacity: 1; } }
+@keyframes w2 { 0%, 12%     { opacity: 0; } 13%, 100% { opacity: 1; } }
+@keyframes w3 { 0%, 24%     { opacity: 0; } 25%, 100% { opacity: 1; } }
+@keyframes w4 { 0%, 49%     { opacity: 0; } 50%, 100% { opacity: 1; } }
+@keyframes w5 { 0%, 74%     { opacity: 0; } 75%, 100% { opacity: 1; } }
+
+nav {
+  position: fixed;
+  bottom: 3vw;
+  left: 3vw;
+  right: 3vw;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: .35em;
+  font-family: monospace;
+  font-size: clamp(18px, 2vw, 34px);
+  letter-spacing: .25em;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #ffee00;
+}

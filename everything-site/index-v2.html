@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Everything Is Coming Back</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background: #f8f8f8;
+      overflow: hidden;
+    }
+
+    .home {
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+    }
+
+    h1 {
+      margin: 0;
+      padding: 40vh 4vw 0;
+      color: #555;
+      font-family: "Special Elite", cursive;
+      font-size: clamp(28px, min(7vw, 10vh), 120px);
+      text-shadow:
+        1px 1px 0 #b0aba4,
+        2px 2px 0 #c0bbb4;
+      font-weight: 400;
+      line-height: 1.1;
+      text-align: left;
+    }
+
+    .l {
+      display: inline;
+      opacity: 0;
+      animation: appear 0.25s ease forwards;
+      animation-delay: calc(var(--i) * 0.12s);
+    }
+
+    @keyframes appear {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    nav {
+      position: fixed;
+      bottom: 3vw;
+      left: 3vw;
+      right: 3vw;
+      display: flex;
+      justify-content: space-between;
+      z-index: 2;
+    }
+
+    nav a {
+      color: #c94a28;
+      text-decoration: underline;
+      text-underline-offset: .35em;
+      font-family: monospace;
+      font-size: clamp(18px, 2vw, 34px);
+      letter-spacing: .25em;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <main class="home">
+    <h1><span class="l" style="--i:1">E</span><span class="l" style="--i:2">V</span><span class="l" style="--i:3">E</span><span class="l" style="--i:4">R</span><span class="l" style="--i:5">Y</span><wbr><span class="l" style="--i:6">T</span><span class="l" style="--i:7">H</span><span class="l" style="--i:8">I</span><span class="l" style="--i:9">N</span><span class="l" style="--i:10">G</span> <span class="l" style="--i:11">I</span><span class="l" style="--i:12">S</span> <span class="l" style="--i:13">C</span><span class="l" style="--i:14">O</span><span class="l" style="--i:15">M</span><span class="l" style="--i:16">I</span><span class="l" style="--i:17">N</span><span class="l" style="--i:18">G</span> <span class="l" style="--i:19">B</span><span class="l" style="--i:20">A</span><span class="l" style="--i:21">C</span><span class="l" style="--i:22">K</span></h1>
+
+    <nav>
+      <a>COLLABORATE</a>
+      <a href="/everything">EVERYTHING</a>
+    </nav>
+  </main>
+</body>
+</html>

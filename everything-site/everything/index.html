@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Everything — Everything Is Coming Back</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: monospace;
+      min-height: 100%;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2px;
+      padding: 2px;
+    }
+
+    .grid a {
+      display: block;
+      position: relative;
+      aspect-ratio: 1;
+      overflow: hidden;
+      text-decoration: none;
+    }
+
+    .grid a img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.3s;
+    }
+
+    .grid a:hover img {
+      opacity: 0.6;
+    }
+
+    .grid a .label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1em;
+      background: linear-gradient(transparent, rgba(0,0,0,0.8));
+      color: #fff;
+      font-size: clamp(12px, 1.2vw, 16px);
+      letter-spacing: .1em;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .grid a:hover .label {
+      opacity: 1;
+    }
+
+    nav {
+      position: fixed;
+      bottom: 3vw;
+      left: 3vw;
+      right: 3vw;
+      display: flex;
+      justify-content: space-between;
+      z-index: 2;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: underline;
+      text-underline-offset: .35em;
+      font-family: monospace;
+      font-size: clamp(18px, 2vw, 34px);
+      letter-spacing: .25em;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #ffee00;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid">
+
+    <!-- To add an artwork: copy this block, update the href, img src, and label text.
+         Each artwork lives in its own subfolder with an index.html and image(s) inside. -->
+
+    <a href="example-artwork/">
+      <img src="example-artwork/image.jpg" alt="Example Artwork">
+      <span class="label">EXAMPLE ARTWORK</span>
+    </a>
+
+  </div>
+
+  <nav>
+    <a href="../index.html">HOME</a>
+    <a href="../collaborate.html">COLLABORATE</a>
+  </nav>
+
+</body>
+</html>
