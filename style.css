@@ -56,14 +56,14 @@ nav a {
   text-decoration: underline;
   text-underline-offset: .35em;
   font-family: monospace;
-  font-size: 24px;
+  font-size: clamp(28px, 2vw, 36px);
   letter-spacing: .25em;
   transition: color 0.2s;
 }
 
 @media (max-width: 720px) {
   nav a {
-    font-size: clamp(26px, 5vw, 34px);
+    font-size: clamp(30px, 6vw, 42px);
   }
 }
 
