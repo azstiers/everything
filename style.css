@@ -16,7 +16,7 @@ body {
   width: 100vw;
   position: relative;
   background: #000;
-  padding-bottom: max(18vw, 10rem);
+  padding-bottom: max(22vw, 14rem);
 }
 
 h1 {
