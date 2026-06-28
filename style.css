@@ -32,7 +32,9 @@ h1 {
 }
 
 /* Homepage heading uses Share Tech Mono */
-.home h1 { font-family: 'Share Tech Mono', monospace; }
+.home h1 { font-family: 'Share Tech Mono', monospace; letter-spacing: 0; word-spacing: -0.08em; }
+
+.home h1 span:nth-child(3) { letter-spacing: -0.08em; }
 
 /* Apply Share Tech Mono to display headings and navigation */
 h1, h2, h3, nav a { font-family: 'Share Tech Mono', monospace; letter-spacing: .08em; }
