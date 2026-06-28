@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
 html, body {
   margin: 0;
   width: 100%;
@@ -31,6 +33,9 @@ h1 {
 
 /* Homepage heading uses Share Tech Mono */
 .home h1 { font-family: 'Share Tech Mono', monospace; }
+
+/* Apply Share Tech Mono to display headings and navigation */
+h1, h2, h3, nav a { font-family: 'Share Tech Mono', monospace; letter-spacing: .08em; }
 
 h1 span { display: inline; }
 
