@@ -95,7 +95,7 @@ nav a:hover {
   color: inherit;
 }
 
-..art-card img {
+.art-card img {
   width: 100%;
   height: auto;
   display: block;
