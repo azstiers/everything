@@ -25,7 +25,8 @@
       padding: 8vh 6vw 12vh;
     }
 
-    .artwork img {
+    .artwork img,
+    .artwork video {
       width: 100%;
       display: block;
       margin-bottom: 2em;
@@ -78,10 +79,29 @@
 <body>
 
   <div class="artwork">
-    <a class="art-card" href="image.jpg">
-      <img src="image.jpg" alt="Ghosts">
+    <div class="art-card">
+      <video class="art-video" autoplay muted loop playsinline controls poster="image-thumb.jpg">
+        <source src="video.mp4" type="video/mp4">
+        <!-- Fallback shown only if the browser doesn't support <video> -->
+        <img src="image.jpg" alt="Ghosts">
+      </video>
+      <!-- Plain image fallback for older browsers; hidden when video is playable -->
+      <img class="video-fallback" src="image.jpg" alt="Ghosts">
       <span class="art-title">Ghosts</span>
-    </a>
+    </div>
+    <script>
+      (function(){
+        try {
+          var v = document.querySelector('.art-card .art-video');
+          var f = document.querySelector('.art-card .video-fallback');
+          if (v && f) {
+            // hide fallback when browser can probably play MP4
+            var can = v.canPlayType && v.canPlayType('video/mp4');
+            if (can === 'probably' || can === 'maybe') f.style.display = 'none';
+          }
+        } catch (e) { /* ignore */ }
+      })();
+    </script>
 
     <h1 style="margin-top:1.25rem">Ghosts</h1>
     <p>Work in project.  Puts words in trees</p>
