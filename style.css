@@ -29,6 +29,9 @@ h1 {
   text-align: left;
 }
 
+/* Homepage heading uses Share Tech Mono */
+.home h1 { font-family: 'Share Tech Mono', monospace; }
+
 h1 span { display: inline; }
 
 h1 > span:nth-child(1) { font-size: .85em; font-weight: 700; color: #fef8f0;  text-shadow: 0 0 15px rgba(254,248,240,0.7), 0 0 45px rgba(254,248,240,0.3); opacity: 0; animation: w1 3s 0.8s 1 both; }
