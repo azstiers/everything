@@ -21,25 +21,27 @@
     .home {
       min-height: 100vh;
       position: relative;
+      padding-bottom: clamp(6rem, 12vw, 9rem);
+      box-sizing: border-box;
     }
 
     .page {
-      max-width: 600px;
-      padding: 12vh 6vw 28vh;
+      max-width: 620px;
+      padding: 10vh 6vw clamp(6rem, 12vw, 8rem);
       color: #fff;
       font-family: monospace;
-      font-size: clamp(20px, 4vw, 28px);
-      line-height: 1.8;
+      font-size: clamp(16px, 1.8vw, 22px);
+      line-height: 1.7;
     }
 
     @media (max-width: 720px) {
       .page {
-        padding: 10vh 5vw 32vh;
-        font-size: clamp(24px, 6vw, 34px);
+        padding: 8vh 5vw clamp(7rem, 16vw, 9rem);
+        font-size: clamp(20px, 4.4vw, 30px);
       }
 
       nav a {
-        font-size: clamp(24px, 6vw, 38px);
+        font-size: clamp(20px, 5vw, 32px);
       }
     }
 
