@@ -81,7 +81,8 @@
   <div class="artwork">
     <div class="art-card">
       <video class="art-video" autoplay muted loop playsinline controls poster="image-thumb.jpg">
-        <source src="video.mp4" type="video/mp4">
+        <source src="4_Wind_Spinners.mp4" type="video/mp4">
+        <source src="4_Wind_Spinners.mov" type="video/quicktime">
         <!-- Fallback shown only if the browser doesn't support <video> -->
         <img src="image.jpg" alt="Ghosts">
       </video>
@@ -95,9 +96,10 @@
           var v = document.querySelector('.art-card .art-video');
           var f = document.querySelector('.art-card .video-fallback');
           if (v && f) {
-            // hide fallback when browser can probably play MP4
-            var can = v.canPlayType && v.canPlayType('video/mp4');
-            if (can === 'probably' || can === 'maybe') f.style.display = 'none';
+            // hide fallback when browser can probably play MP4 or QuickTime
+            var canMp4 = v.canPlayType && v.canPlayType('video/mp4');
+            var canMov = v.canPlayType && v.canPlayType('video/quicktime');
+            if ((canMp4 === 'probably' || canMp4 === 'maybe') || (canMov === 'probably' || canMov === 'maybe')) f.style.display = 'none';
           }
         } catch (e) { /* ignore */ }
       })();
