@@ -69,7 +69,7 @@ nav a {
   }
 
   .home nav a {
-    font-size: clamp(18px, 5.2vw, 26px);
+    font-size: clamp(16px, 4.8vw, 24px);
   }
 }
 
