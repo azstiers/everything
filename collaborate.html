@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Collaborate — Everything Is Coming Back</title>
   <link rel="stylesheet" href="style.css">
   <style>
@@ -35,13 +36,18 @@
     }
 
     @media (max-width: 720px) {
+      .home {
+        padding-bottom: max(24vw, 16rem);
+      }
+
       .page {
-        padding: 8vh 5vw clamp(7rem, 16vw, 9rem);
-        font-size: clamp(26px, 7vw, 44px);
+        padding: 8vh 5vw clamp(10rem, 18vw, 16rem);
+        font-size: clamp(30px, 9vw, 50px);
+        line-height: 1.8;
       }
 
       nav a {
-        font-size: clamp(22px, 6vw, 38px);
+        font-size: clamp(24px, 7vw, 44px);
       }
     }
 
